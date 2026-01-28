@@ -24,3 +24,6 @@ ${ALERT_VALOR_OBRIGATORIO}    Valor é obrigatório
 ${ALERT_VALOR_NUMERICO}    Valor deve ser um número
 ${ALERT_MOVIMENTACAO_REMOVIDA_COM_SUCESSO}    Movimentação removida com sucesso!
 
+${BASE_URL}    https://barrigarest.wcaquino.me
+${TOKEN}       NONE
+${BODY}    NONE

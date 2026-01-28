@@ -1,7 +1,6 @@
 *** Settings ***
-Library    SeleniumLibrary
-Resource   ../resources/variables.robot
-Resource   ../resources/keywords.robot
+Resource   ../../resources/variables.robot
+Resource   ../../resources/keywords_frontend.robot
 Test Setup    Iniciar Chrome
 Test Teardown    Close All Browsers
 
