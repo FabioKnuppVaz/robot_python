@@ -1,6 +1,7 @@
 *** Settings ***
 Library    RequestsLibrary
 Library    Collections
+Library    FakerLibrary
 Resource   variables.robot
 
 *** Keywords ***
@@ -19,6 +20,19 @@ Fazer Login
     ...    api
     ...    /signin
     ...    json=${body}
+    RETURN    ${resp}
 
-    ${token}=    Set Variable    ${resp.json()}[token]
-    Set Test Variable    ${TOKEN}    ${token}
+Adicionar Conta
+    [Arguments]    ${nome}    ${token}
+    ${body}=    Create Dictionary
+    ...    nome=${nome}
+
+    ${headers}=    Create Dictionary
+    ...    Authorization=JWT ${token}
+
+    ${resp}=    POST On Session
+    ...    api
+    ...    /contas
+    ...    json=${body}
+    ...    headers=${headers}
+    RETURN    ${resp}
