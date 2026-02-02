@@ -4,10 +4,9 @@ Resource   ../../resources/keywords_backend.robot
 Test Setup    Limpar Variaveis Globais
 
 *** Test Cases ***
-Validar login valido
+Validar Adicionar Movimentacao
     Fazer Login Valido
-    Status Should Be    200    ${RESP}
-
-Validar tentativa de acessar a api sem login
-    Retornar Contas    401
-    Status Should Be    401    ${RESP}
+    Adicionar Conta
+    Adicionar Movimentacao
+    Status Should Be    201    ${RESP}
+    Validar Campos da Movimentacao

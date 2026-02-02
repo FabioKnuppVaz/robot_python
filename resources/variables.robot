@@ -27,3 +27,6 @@ ${ALERT_MOVIMENTACAO_REMOVIDA_COM_SUCESSO}    Movimentação removida com sucess
 ${BASE_URL}    https://barrigarest.wcaquino.me
 ${TOKEN}       NONE
 ${BODY}    NONE
+${RESP}    NONE
+${CONTA_ID}    NONE
+${CONTA_NOME}    NONE
